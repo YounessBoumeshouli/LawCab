@@ -4,50 +4,7 @@ $title = "Formulaire for";
 
 ?>
 
-<header class="bg-white/95 backdrop-blur-md shadow-sm py-4">
-      <div class="container mx-auto px-4">
-        <nav class="flex justify-between items-center text-white">
-          <div class="flex items-center space-x-12">
-            <a href="/" class="flex items-center space-x-2">
 
-              <span class="font-display text-2xl text-gray-900">Wellington & Partners</span>
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex space-x-8">
-              <a href="#home" class="nav-link">Home</a>
-              <a href="#attorneys" class="nav-link">Our Attorneys</a>
-              <a href="#expertise" class="nav-link">Expertise</a>
-              <a href="#contact" class="nav-link">Contact</a>
-            </div>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="hidden lg:flex items-center space-x-6">
-           
-            <a href="index.php?action=formClient" class="btn-primary">Start Consultation</a>
-          </div>
-
-          <!-- Mobile menu button -->
-          <button id="menu-btn" class="lg:hidden flex flex-col space-y-2 menu-btn">
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-            <span class="burger-line"></span>
-          </button>
-        </nav>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4">
-          <div class="flex flex-col space-y-4">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#attorneys" class="nav-link">Our Attorneys</a>
-            <a href="#expertise" class="nav-link">Expertise</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <a href="#contact" class="btn-primary text-center">Schedule Consultation</a>
-          </div>
-        </div>
-      </div>
-    </header>
 
     <main>
       <!-- Hero Section -->
@@ -61,7 +18,6 @@ $title = "Formulaire for";
         </div>
       </section>
 
-      <!-- Attorneys Section -->
       <section id="attorneys" class="py-20">
         <div class="container mx-auto px-4">
           <h2 class="font-display text-4xl text-center mb-16 animate-on-scroll">Our Distinguished Attorneys</h2>
@@ -80,44 +36,16 @@ $title = "Formulaire for";
                      class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 class="font-display text-2xl mb-2"><?=$row['full_name']?></h3>
+                    <a href="index.php?action=ClientReservation&idAvocat=<?=$row["id"]?>" class="font-display text-2xl mb-2"><?=$row['full_name']?></a>
                     <p class="text-gold-400"><?=$row['email']?></p>
                   </div>
                 </div>
               </div>
-            </div>
+             </div>
                 <?php
                 }
                 ?>
-            <!-- Attorney Card 2 -->
-            <!-- <div class="group animate-on-scroll">
-              <div class="relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" 
-                     alt="Sarah Chen" 
-                     class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 class="font-display text-2xl mb-2">Sarah Chen</h3>
-                    <p class="text-gold-400">Corporate Law</p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Attorney Card 3 -->
-            <!-- <div class="group animate-on-scroll">
-              <div class="relative overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" 
-                     alt="Michael Roberts" 
-                     class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 class="font-display text-2xl mb-2">Michael Roberts</h3>
-                    <p class="text-gold-400">Litigation</p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+            
             <div>
                 <span class="text-white mr-4" >are you a lawyer?</span>
 
@@ -129,7 +57,6 @@ $title = "Formulaire for";
         </div>
       </section>
 
-      <!-- Contact Section -->
       <section id="contact" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto">

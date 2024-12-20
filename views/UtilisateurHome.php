@@ -37,12 +37,12 @@ $title = "Formulaire for";
                      class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 class="font-display text-2xl mb-2"><?=$row['full_name']?></h3>
+                    <a href="index.php?action=ClientReservation&idAvocat=<?=$row["id"]?>" class="font-display text-2xl mb-2"><?=$row['full_name']?></a>
                     <p class="text-gold-400"><?=$row['email']?></p>
                   </div>
                 </div>
               </div>
-            </div>
+             </div>
                 <?php
                 }
                 ?>

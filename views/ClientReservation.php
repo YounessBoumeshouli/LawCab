@@ -17,9 +17,9 @@ ob_start();
                 </div>
                 <div class=" ">
                     <div class="text-center px-14">
-                        <h2 class="text-gray-800 text-3xl font-bold">Mohit Dhiman</h2>
-                        <a class="text-gray-400 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()">@immohitdhiman</a>
-                        <p class="mt-2 text-gray-500 text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        <h2 class="text-gray-800 text-3xl font-bold"><?=$result[0]["full_name"]?></h2>
+                        <a class="text-gray-400 mt-2 hover:text-blue-500" href="https://www.instagram.com/immohitdhiman/" target="BLANK()"><?=$result[0]["email"]?></a>
+                        <p class="mt-2 text-gray-500 text-sm"><?=$result[0]["biography"]?></p>
                     </div>
                     <hr class="mt-6" />
                    
@@ -27,54 +27,54 @@ ob_start();
             </div>
     <div class='w-full max-w-lg p-6 mx-auto bg-white rounded-2xl shadow-xl flex flex-col'>
         
-        <div class="flex justify-between pb-4">
-<div class="-rotate-90 cursor-pointer">
+<div class="flex justify-between pb-4">
+  <div class="-rotate-90 cursor-pointer">
     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.001 6L6.00098 1L1.00098 6" stroke="black" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+ <path d="M11.001 6L6.00098 1L1.00098 6" stroke="black" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
  </div>
-<span class="uppercase text-sm font-semibold text-gray-600">january - 2022</span>
-<div class="rotate-90 cursor-pointer">
-    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.001 6L6.00098 1L1.00098 6" stroke="black" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</div>
+    <span class="uppercase text-sm font-semibold text-gray-600">january - 2022</span>
+    <div class="rotate-90 cursor-pointer">
+        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.001 6L6.00098 1L1.00098 6" stroke="black" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </div>
        
     </div>
  <div class="flex justify-between font-medium uppercase text-xs pt-4 pb-2 border-t">
 
     <div class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-red-500 text-red-500 shadow-md">
-sun
+    sun
     </div>
 
 
     <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">
-mon
+    mon
     </span>
 
 
     <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">
-tue
+    tue
     </span>
 
 
     <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">
-wed
+    wed
     </span>
 
 
     <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">
-thu
+    thu
     </span>
 
 
     <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">
-fri
+    fri
     </span>
 
 
     <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">
-sat
+    sat
     </span>
 
  </div>
@@ -82,74 +82,74 @@ sat
  <div class="flex justify-between font-medium text-sm pb-2">
 
     <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
-30
+    30
     </span>
 
 
     <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
-31
+    31
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-01
+    01
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-02
+    02
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-03
+    03
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-04
+    04
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-05
+    05
     </span>
 
  </div>
   <div class="flex justify-between font-medium text-sm pb-2">
 
    <span class="px-1 w-14 flex justify-center items-center border border-red-500 text-red-500 cursor-pointer">
-06
+    06
     </span>
 
 
    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-07
+    07
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-08
+    08
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-09
+    09
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-10
+ 10
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-11
+ 11
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-12
+ 12
     </span>
 
  </div>
@@ -157,37 +157,37 @@ sat
  <div class="flex justify-between font-medium text-sm pb-2">
 
    <span class="px-1 w-14 flex justify-center items-center border border-red-500 text-red-500 cursor-pointer">
-13
+ 13
     </span>
 
 
    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-14
+ 14
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-15
+ 15
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-16
+ 16
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-17
+ 17
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-18
+ 18
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-19
+ 19
     </span>
 
  </div>
@@ -195,75 +195,75 @@ sat
  <div class="flex justify-between font-medium text-sm pb-2">
 
    <span class="px-1 w-14 flex justify-center items-center border border-red-500 text-red-500 cursor-pointer">
-20
+ 20
     </span>
 
 
    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-21
+ 21
     </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-22
-    </span>
+    22
+        </span>
+
+
+        <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
+    23
+        </span>
+
+
+        <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
+    24
+        </span>
+
+
+        <span class="px-1 w-14 flex justify-center items-center border border-green-500 text-white bg-green-500 rounded-2xl cursor-pointer shadow-md">
+    25
+        </span>
+
+
+        <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
+    26
+        </span>
+
+    </div>
+
+    <div class="flex justify-between font-medium text-sm pb-2">
+
+    <span class="px-1 w-14 flex justify-center items-center border border-red-500 text-red-500 cursor-pointer">
+    27
+        </span>
 
 
     <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-23
-    </span>
+    28
+        </span>
 
 
-    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-24
-    </span>
+        <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
+    29
+        </span>
 
 
-    <span class="px-1 w-14 flex justify-center items-center border border-green-500 text-white bg-green-500 rounded-2xl cursor-pointer shadow-md">
-25
-    </span>
-
-
-    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-26
-    </span>
-
- </div>
-
- <div class="flex justify-between font-medium text-sm pb-2">
-
-   <span class="px-1 w-14 flex justify-center items-center border border-red-500 text-red-500 cursor-pointer">
-27
-    </span>
-
-
-   <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-28
-    </span>
-
-
-    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-29
-    </span>
-
-
-    <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
-30
+        <span class="px-1 w-14 flex justify-center items-center border hover:border-green-500 hover:text-green-500 cursor-pointer">
+    30
     </span>
 
 
     <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
-01
-    </span>
+    01
+        </span>
 
 
-    <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
-02
-    </span>
+        <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
+    02
+        </span>
 
 
-    <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
-03
+        <span class="px-1 text-gray-400 w-14 flex justify-center items-center">
+    03
     </span>
 
  </div>

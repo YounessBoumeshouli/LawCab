@@ -45,8 +45,7 @@ function insertAvocat() {
     $stmt->bindParam(':role', $role, PDO::PARAM_STR);
     $stmt->bindParam(':password', $hashedPassword, PDO::PARAM_STR);
     $stmt->bindParam(':numerotelephone', $numerotelephone, PDO::PARAM_STR);
-    $stmt->bindParam(':idspecialite', $idspécialité, PDO::PARAM_INT);  // Ensure the column name matches
-    
+    $stmt->bindParam(':idspecialite', $idspécialité, PDO::PARAM_INT);  
     try {
         $stmt->execute();
         echo "Avocat added successfully!";
@@ -58,14 +57,24 @@ function insertAvocat() {
 
 function SelectAvocat(){
     $pdo = Connexion();  
-    $stmt = $pdo->query("select * from public.user");
+    $stmt = $pdo->query("select * from public.user where role = 'Avocat' ");
     return $stmt;
-    
 }
 function selectSpecialities(){
     $pdo = Connexion();
     $stmt = $pdo->query("select * from public.specialite");
     return $stmt;
+}
+function reservationsAvocat(){
+    $pdo = Connexion();
+  if($_COOKIE["idAvocat"]){
+    $mat = $_COOKIE['idAvocat'];
+    $stmt = $pdo->prepare("select * from public.reservations where idavocat = :idAvocat");
+    $stmt->bindParam(':idAvocat',$mat,PDO::PARAM_STR);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+   
+  }
 }
 function refuseReservation(){
 }
@@ -77,4 +86,79 @@ function AnnulerReservation(){
 }
 function ajouterUnAvis(){
 
+}
+function AvocatInformations(){
+    $pdo = Connexion();  
+    if($_COOKIE["idAvocat"]){
+        $mat = $_COOKIE['idAvocat'];
+        $stmt = $pdo->prepare("select * from public.user u left join public.specialite s on s.idsp = u.idspecialite  where  u.matricule=:matricule");
+        $stmt->bindParam(':matricule',$mat,PDO::PARAM_STR);
+        $stmt->execute();
+       
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        return $result;
+      }
+}
+function afficherDisponibility(){
+    $pdo = Connexion();  
+    if($_COOKIE["idAvocat"]){
+        $mat = $_COOKIE['idAvocat'];
+        $stmt = $pdo->prepare("select * from public.disponibility d where d.idavocat = :idavocat");
+        $stmt->bindParam(':idavocat',$mat,PDO::PARAM_STR);
+        $stmt->execute();
+        
+        var_dump($result);
+        return $stmt;
+      }
+}
+function updateDis() {
+    $pdo = Connexion();
+    
+    if ($_COOKIE["idAvocat"]) {
+        $mat = $_COOKIE['idAvocat'];
+        isset($_POST["selectedDates"]) ? $dates = $_POST["selectedDates"] : header("location:index.php?action=AvocatProfile");
+
+        $date = explode(",", $dates);
+        $selecedDates = [];
+
+        sort($date);
+
+        echo 'Sorted dates:<br>';
+        foreach ($date as $d) {
+            echo $d . "<br>";
+        }
+
+        echo 'Selected dates:<br>';
+        $selecedDates[] = $date[0];
+        $j = 1;
+
+        for ($i = 1; $i < count($date) - 1; $i++) {
+            if (($date[$i] - $date[$i - 1] > 1) || ($date[$i + 1] - $date[$i] > 1)) {
+                $selecedDates[$j] = $date[$i];
+                $j++;
+            }
+        }
+        $selecedDates[$j] = $date[count($date) - 1];
+
+        foreach ($selecedDates as $sDate) {
+            echo $sDate . "S<br>";
+        }
+
+        $year = date('Y');
+        $month = date('m');
+
+        for ($i = 0; $i < count($selecedDates); $i += 2) {
+            $datedebut = $year . "-" . $month . "-" . $selecedDates[$i];
+            $datefin = $year . "-" . $month . "-" . $selecedDates[$i + 1];
+
+            $query = "INSERT INTO public.disponibility (idavocat, datedebut, datefin)
+                      VALUES (:idavocat, :datedebut, :datefin)";
+            $stmt = $pdo->prepare($query); 
+            $stmt->bindParam(':idavocat', $mat, PDO::PARAM_STR);
+            $stmt->bindParam(':datedebut', $datedebut, PDO::PARAM_STR);
+            $stmt->bindParam(':datefin', $datefin, PDO::PARAM_STR);
+            $stmt->execute();
+        }
+    }
 }

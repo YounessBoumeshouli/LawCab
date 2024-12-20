@@ -12,6 +12,18 @@ switch ($action) {
     case 'formClient':
         ViewForm();
         break;
+    case 'Authentification':
+        Authentification();
+        break;
+    case 'ClientInscriptionForm':
+        ClientInscriptionForm();
+        break;
+    case 'ClientInscription':
+        ClientInscription();
+        break;
+    case 'ClientHome':
+        ClientHome();
+        break;
     case 'ClientReservation':
         ClientReservation();
         break;
@@ -29,6 +41,9 @@ switch ($action) {
         break;
     case 'AvocatProfile':
         viewAvocatProfile();
+        break;
+    case 'updateDisponibility':
+        updateDisponibility();
         break;
     default:
        ViewHome();

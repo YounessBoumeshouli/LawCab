@@ -48,14 +48,12 @@
               <a href="#contact" class="nav-link">Contact</a>
             </div>
           </div>
-
-          <!-- Contact Info -->
+            <div><?=$_COOKIE['idClient']?></div>
           <div class="hidden lg:flex items-center space-x-6">
-           
-            <a href="index.php?action=formClient" class="btn-primary">Start Consultation</a>
-          </div>
+    <a href="index.php?action=<?php echo isset($_COOKIE['idClient']) ? 'home&idClient=' . $_COOKIE['idClient'] : 'formClient'; ?>" 
+       class="btn-primary">Start Consultation</a>
+</div>
 
-          <!-- Mobile menu button -->
           <button id="menu-btn" class="lg:hidden flex flex-col space-y-2 menu-btn">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
